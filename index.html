@@ -165,9 +165,7 @@ svg text{font-family:system-ui,Arial,sans-serif}
       <div class="bsp"><span class="t">Graph fällt</span><br>Die 2. Größe nimmt ab (z.&nbsp;B. Wasser läuft ab, es wird kälter).</div>
     </div>
     <div class="tipp"><b>Achtung Falle:</b> Ein Graph ist <b>kein Bild</b> der Situation! Bei <span class="fx">Zeit → Geschwindigkeit</span> bedeutet ein ansteigender Graph „schneller werden“ – nicht „bergauf fahren“. Bergauf wird man meist sogar langsamer.</div>
-    <h3>Füllgraphen</h3>
-    <p>Wird ein Gefäß gleichmäßig mit Wasser gefüllt, hängt der Graph <span class="fx">Zeit → Füllhöhe</span> von der Form ab: Wo das Gefäß <b>breit</b> ist, steigt das Wasser <b>langsam</b> (Graph flach). Wo es <b>schmal</b> ist, steigt das Wasser <b>schnell</b> (Graph steil). Ein Gefäß mit überall gleicher Breite (Zylinder) ergibt eine <b>Gerade</b>.</p>
-    <div id="fuellDemo" class="figrow"></div>
+    
   </div>
   <h3>Aufgaben</h3>
   <div id="tasks_t1"></div>
@@ -329,7 +327,7 @@ svg text{font-family:system-ui,Arial,sans-serif}
     <div class="btns"><button class="b g" id="examSubmit">Abgeben &amp; auswerten</button><button class="b s" id="examSolAll">Alle Musterlösungen zeigen</button></div>
     <div id="examResult" class="result" style="margin-top:12px"></div>
     <div class="scroll"><table class="wt" style="margin-top:10px">
-      <tr><th>Punkte (von 40)</th><td>40–36</td><td>35–30</td><td>29–24</td><td>23–18</td><td>17–9</td><td>8–0</td></tr>
+      <tr><th>Punkte (von 36)</th><td>36–33</td><td>32–27</td><td>26–22</td><td>21–16</td><td>15–8</td><td>7–0</td></tr>
       <tr><th>Note</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
     </table></div>
     <p class="small">Notenschlüssel als Orientierung – deine Lehrkraft kann einen anderen verwenden.</p>
@@ -464,23 +462,11 @@ renderTasks('t1',[
  parts:[{q:'a) Welche Strecke ist nach 1 Stunde zurückgelegt?',a:5,unit:'km'},{q:'b) Wie lange dauert die Pause?',a:1,unit:'h'},{q:'c) Wie lang ist die gesamte Wanderung?',a:12,unit:'km'},{q:'d) In welcher Stunde ging die Gruppe am schnellsten?',opts:['1. Stunde','2. Stunde','3. Stunde','4. Stunde'],a:0},{q:'e) Wie viele km wurden in der letzten Stunde gelaufen?',a:3,unit:'km'}],
  hint:'Eine Pause erkennst du an einem waagerechten Stück. „Am schnellsten“ heißt: Der Graph ist dort am steilsten.',
  sol:'a) 5 km · b) waagerecht von 2 h bis 3 h → 1 Stunde · c) 12 km · d) In der 1. Stunde (5 km, Graph am steilsten); 2. Stunde nur 4 km · e) 12 − 9 = 3 km.'},
-{lv:2,title:'Füllgraphen zuordnen',ref:'S. 53 Nr. 14',
- text:`Die Gefäße werden gleichmäßig mit Wasser gefüllt. Ordne jedem Gefäß den passenden Graphen <span class="fx">Zeit → Füllhöhe</span> zu.
- <div class="figrow">${vessel('zyl','Gefäß A')}${vessel('unten','Gefäß B')}${vessel('oben','Gefäß C')}${vessel('stufe','Gefäß D')}</div>
- <div class="figrow">${graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,title:'Graph 1',series:[{f:x=>Math.sqrt(x*4)}]})}${graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,title:'Graph 2',series:[{pts:[[0,0],[4,4]]}]})}${graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,title:'Graph 3',series:[{f:x=>x*x/4}]})}${graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,title:'Graph 4',series:[{pts:[[0,0],[3,2],[3.5,4]]}]})}</div>`,
- parts:[{q:'Gefäß A (Zylinder)',opts:['Graph 1','Graph 2','Graph 3','Graph 4'],a:1},{q:'Gefäß B (unten breit, oben schmal)',opts:['Graph 1','Graph 2','Graph 3','Graph 4'],a:2},{q:'Gefäß C (unten schmal, oben breit)',opts:['Graph 1','Graph 2','Graph 3','Graph 4'],a:0},{q:'Gefäß D (unten breit, oben schmal mit Stufe)',opts:['Graph 1','Graph 2','Graph 3','Graph 4'],a:3}],
- hint:'Breit → Wasser steigt langsam → Graph flach. Schmal → Wasser steigt schnell → Graph steil.',
- sol:'A → Graph 2 (gleiche Breite = Gerade) · B → Graph 3 (erst flach, wird immer steiler, weil das Gefäß nach oben schmaler wird) · C → Graph 1 (erst steil, dann immer flacher) · D → Graph 4 (zwei gerade Stücke: unten breit = flach, oben schmal = steil).'},
 {lv:2,title:'Graph zeichnen',ref:'S. 51 Nr. 7–8',
  text:`Ein Kerzenstück ist anfangs 24 cm lang. Es brennt pro Stunde um 3 cm ab.<br>Lege eine Wertetabelle für <span class="fx">Brenndauer (in h) → Länge (in cm)</span> an und zeichne den Graphen in dein Heft (x-Achse: 1 cm ≙ 1 h, y-Achse: 1 cm ≙ 4 cm).`,
  parts:[{q:'a) Länge nach 3 Stunden',a:15,unit:'cm'},{q:'b) Länge nach 5 Stunden',a:9,unit:'cm'},{q:'c) Nach wie vielen Stunden ist die Kerze abgebrannt?',a:8,unit:'h'},{q:'d) Darf man die Punkte verbinden?',opts:JN,a:0}],
  hint:'Pro Stunde werden 3 cm abgezogen. Rechne 24 : 3 für c).',
  sol:`Tabelle: 0 h → 24 cm, 1 → 21, 2 → 18, 3 → 15, 4 → 12, 5 → 9, 6 → 6, 7 → 3, 8 → 0.<br>${graph({xmin:0,xmax:8,ymin:0,ymax:24,xstep:1,ystep:4,xl:'Zeit (h)',yl:'Länge (cm)',series:[{pts:[[0,24],[8,0]],dots:[[0,24],[1,21],[2,18],[3,15],[4,12],[5,9],[6,6],[7,3],[8,0]]}]})}<br>d) Ja, denn die Zeit läuft gleichmäßig weiter – auch nach 2,5 h hat die Kerze eine Länge.`},
-{lv:3,title:'Wahr oder falsch? – Radrennen',ref:'S. 52 Nr. 13',
- text:`Bei einem Radrennen wurde 45 Minuten lang die Geschwindigkeit eines Fahrers gemessen.<div>${graph({w:380,xmin:0,xmax:45,ymin:0,ymax:45,xstep:5,ystep:10,gy:5,xl:'Zeit (in min)',yl:'Geschwindigkeit (in km/h)',series:[{pts:[[0,35],[5,32],[10,25],[15,22],[20,25],[25,30],[30,32],[35,30],[40,38],[45,42]]}]})}</div>`,
- parts:[{q:'a) 10 Minuten nach Beginn fuhr er 25 km/h.',opts:WF,a:0},{q:'b) Seine Geschwindigkeit war nie unter 20 km/h.',opts:WF,a:0},{q:'c) In den letzten 15 Minuten wurde er die ganze Zeit schneller.',opts:WF,a:1},{q:'d) Man erkennt, dass es in den ersten 15 Minuten bergab ging.',opts:WF,a:1},{q:'e) Am schnellsten war er am Ende der Messung.',opts:WF,a:0}],
- hint:'Betrachte bei c) den Bereich von 30 bis 45 Minuten genau. Bei d): Was bedeutet ein fallender Graph bei Zeit → Geschwindigkeit?',
- sol:'a) wahr · b) wahr (tiefster Wert 22 km/h nach 15 min) · c) falsch – von 30 bis 35 min sinkt die Geschwindigkeit von 32 auf 30 km/h · d) falsch – der Graph fällt, der Fahrer wird also langsamer. Das passt eher zu bergauf; die Landschaft kann man aus dem Graphen aber gar nicht sicher ablesen · e) wahr (42 km/h).'},
 {lv:3,title:'Zwei Schulwege',ref:'S. 52 Nr. 11',
  text:`Tim und Jana gehen nach der Schule nach Hause. Der Graph zeigt <span class="fx">Zeit (in min) → Entfernung von der Schule (in m)</span>.<div>${graph({w:380,xmin:0,xmax:30,ymin:0,ymax:1200,xstep:5,ystep:200,xl:'Zeit (in min)',yl:'Entfernung (in m)',series:[{pts:[[0,0],[5,400],[10,800],[20,800],[25,1200]],c:'#1769aa',label:[21,760,'Tim']},{pts:[[0,0],[30,600]],c:'#c0392b',label:[24,420,'Jana']}]})}</div>`,
  parts:[{q:'a) Wie lange bleibt Tim stehen (z.&nbsp;B. am Kiosk)?',a:10,unit:'min'},{q:'b) Wie weit ist Jana nach 15 Minuten von der Schule entfernt?',a:300,unit:'m'},{q:'c) Wie weit wohnt Tim von der Schule entfernt?',a:1200,unit:'m'},{q:'d) Wer geht am Anfang schneller?',opts:['Tim','Jana'],a:0},{q:'e) Können sich die beiden unterwegs begegnet sein, wenn sie den gleichen Weg gehen?',opts:['ja','nein'],a:1}],
@@ -495,42 +481,16 @@ renderTasks('t2',[
  parts:[{q:'(1) x = 0',a:1},{q:'(1) x = 2',a:7},{q:'(1) x = 5',a:16},{q:'(1) x = 2,5',a:8.5},{q:'(2) x = 3',a:14},{q:'(2) x = 7,5',a:5},{q:'(2) x = 10',a:0}],
  hint:'Punkt- vor Strichrechnung: erst 3 · x, dann + 1.',
  sol:'(1) 3·0+1 = 1 · 3·2+1 = 7 · 3·5+1 = 16 · 3·2,5+1 = 8,5<br>(2) 20−2·3 = 14 · 20−2·7,5 = 5 · 20−2·10 = 0'},
-{lv:1,title:'Formel und Beschreibung',ref:'S. 56 Nr. 3',
- text:'Welche Formel passt zur Beschreibung?',
- parts:[{q:'a) „Verdopple x und subtrahiere anschließend 1.“',opts:['y = (x − 1) · 2','y = 2 · x − 1','y = x² − 1','y = x : 2 − 1'],a:1},{q:'b) „Vergrößere x um 1 und quadriere das Ergebnis.“',opts:['y = x² + 1','y = 2 · (x + 1)','y = (x + 1)²','y = x + 1²'],a:2},{q:'c) „Dividiere x durch 2 und subtrahiere 1.“',opts:['y = (x − 1) : 2','y = x : 2 − 1','y = 2 : x − 1','y = 2 · x − 1'],a:1},{q:'d) „Verringere x um 1 und dividiere das Ergebnis durch 2.“',opts:['y = x − 1 : 2','y = (x − 1) : 2','y = x : 2 − 1','y = (x − 2) : 1'],a:1}],
- hint:'„… und dann …“ mit dem Ergebnis rechnen bedeutet oft: Klammer setzen!',
- sol:'a) y = 2 · x − 1 · b) y = (x + 1)² · c) y = x : 2 − 1 · d) y = (x − 1) : 2 (Klammer, weil das ganze Ergebnis geteilt wird).'},
 {lv:2,title:'Müsli-Vorrat',ref:'S. 56 Nr. 7',
  text:'Familie Kaya hat 1800 g Müsli. Jeden Tag werden 150 g gegessen. Die Zuordnung <span class="fx">Anzahl der Tage x → vorhandene Menge m (in g)</span> wird durch <span class="fx">m = 1800 − 150 · x</span> beschrieben.',
  parts:[{q:'a) Wie viel Müsli ist nach 4 Tagen noch da?',a:1200,unit:'g'},{q:'b) Was bedeutet die Zahl 150?',opts:['Müsli am Anfang','Verbrauch pro Tag','Anzahl der Tage','Müsli am Ende'],a:1},{q:'c) Nach wie vielen Tagen ist das Müsli aufgebraucht?',a:12,unit:'Tage'},{q:'d) Warum darf man für x keine 15 einsetzen?',opts:['Weil m dann negativ wäre – das ist sinnlos','Weil 15 keine gerade Zahl ist','Weil man nur Zehnerzahlen einsetzen darf'],a:0}],
  hint:'Für c): Bei welchem x wird m = 0? Also 150 · x = 1800.',
  sol:'a) 1800 − 150·4 = 1800 − 600 = 1200 g · b) täglicher Verbrauch · c) 1800 : 150 = 12 Tage · d) m = 1800 − 2250 = −450 g – eine negative Müslimenge gibt es nicht.'},
-{lv:2,title:'Tabellenkalkulation',ref:'S. 56 Nr. 6',
- text:`Lena hat in einer Tabellenkalkulation eine Wertetabelle erstellt. In Zeile 1 stehen die x-Werte, in Zeile 2 die y-Werte.<div class="scroll"><table class="wt"><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr><tr><th>1</th><td>x</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>2</th><td>y</td><td>2</td><td>5</td><td>10</td><td>17</td></tr></table></div>`,
- parts:[{q:'a) Welche Formel steht in Zelle B2?',opts:['=2*B1','=B1*B1+1','=3*B1-1','=B1+1'],a:1},{q:'b) Welcher Wert erscheint für x = 6?',a:37},{q:'c) Welche Formel gehört zu einer Tabelle mit y-Werten 2, 5, 8, 11?',opts:['=B1^2+1','=3*B1-1','=2*B1','=B1+3'],a:1}],
- hint:'Setze x = 3 in jede Formel ein und prüfe, ob 10 herauskommt.',
- sol:'a) =B1*B1+1, also y = x² + 1 (1²+1 = 2, 2²+1 = 5, 3²+1 = 10) · b) 6² + 1 = 37 · c) Die y-Werte wachsen jeweils um 3 → =3*B1-1 (3·1−1 = 2, 3·2−1 = 5 …).'},
 {lv:2,title:'Sparen für ein Fahrrad',ref:'S. 56 Nr. 8 / S. 57 Nr. 11',
  text:'Lina hat 35 € in ihrer Spardose und legt jede Woche 4,50 € dazu.',
  parts:[{q:'a) Welche Formel beschreibt <span class="fx">Anzahl der Wochen x → Betrag y (in €)</span>?',opts:['y = 4,50 + 35 · x','y = (35 + 4,50) · x','y = 35 + 4,50 · x','y = 35 · 4,50 + x'],a:2},{q:'b) Wie viel Geld hat sie nach 8 Wochen?',a:71,unit:'€'},{q:'c) Nach wie vielen Wochen hat sie zum ersten Mal mindestens 100 €?',a:15,unit:'Wochen'}],
  hint:'c) Rechne aus, wie viel noch fehlt (100 − 35) und wie viele Wochen à 4,50 € dafür nötig sind. Runde sinnvoll!',
- sol:'a) y = 35 + 4,50 · x · b) 35 + 4,50 · 8 = 35 + 36 = 71 € · c) (100 − 35) : 4,50 = 14,4… → nach 14 Wochen hat sie erst 98 €, nach <b>15 Wochen</b> 102,50 €.'},
-{lv:3,title:'Streichholz-Muster',ref:'S. 57 Nr. 9',
- text:`Aus Streichhölzern werden Quadrate in einer Reihe gelegt.
- <svg viewBox="0 0 420 70" width="100%" style="max-width:420px"><g stroke="#c0392b" stroke-width="4" stroke-linecap="round">
- <rect x="10" y="15" width="40" height="40" fill="none"/>
- <rect x="90" y="15" width="40" height="40" fill="none"/><rect x="130" y="15" width="40" height="40" fill="none"/>
- <rect x="210" y="15" width="40" height="40" fill="none"/><rect x="250" y="15" width="40" height="40" fill="none"/><rect x="290" y="15" width="40" height="40" fill="none"/></g>
- <g font-size="12" fill="#444"><text x="12" y="68">Figur 1</text><text x="110" y="68">Figur 2</text><text x="250" y="68">Figur 3</text></g></svg>
- Figur 1 braucht 4, Figur 2 braucht 7 und Figur 3 braucht 10 Streichhölzer.`,
- parts:[{q:'a) Wie viele Hölzer braucht Figur 5?',a:16},{q:'b) Welche Formel beschreibt <span class="fx">Nummer n → Anzahl der Hölzer h</span>?',opts:['h = 4 · n','h = 3 · n + 1','h = n + 3','h = 4 · n − 1'],a:1},{q:'c) Welche Figur besteht aus genau 91 Hölzern?',a:30},{q:'d) Wie viele Hölzer braucht Figur 100?',a:301}],
- hint:'Ein Holz liegt ganz links. Für jedes Quadrat kommen dann 3 Hölzer dazu.',
- sol:'a) 4, 7, 10, 13, 16 → 16 Hölzer · b) h = 3 · n + 1 (1 Startholz + 3 pro Quadrat) · c) 3n + 1 = 91 → 3n = 90 → n = 30 · d) 3 · 100 + 1 = 301.'},
-{lv:3,title:'Formel aus der Tabelle finden',ref:'S. 57 Nr. 13',
- text:'<div class="scroll"><table class="wt"><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>y</th><td>5</td><td>8</td><td>11</td><td>14</td><td>17</td></tr></table></div>',
- parts:[{q:'a) Formel?',opts:['y = 5 · x + 3','y = 3 · x + 5','y = x + 5','y = 8 · x'],a:1},{q:'b) y-Wert für x = 10',a:35},{q:'c) Welchem x-Wert ist y = 50 zugeordnet?',a:15},{q:'d) Welchem x-Wert ist y = 0 zugeordnet? (als Bruch oder Dezimalzahl)',a:-5/3,tol:0.01}],
- hint:'Um wie viel wächst y, wenn x um 1 wächst? Was ist y bei x = 0?',
- sol:'a) y wächst um 3, Startwert 5 → y = 3x + 5 · b) 3·10 + 5 = 35 · c) 3x + 5 = 50 → 3x = 45 → x = 15 · d) 3x + 5 = 0 → x = −5/3 ≈ −1,67 (rückwärts rechnen: −5, dann : 3).'}
+ sol:'a) y = 35 + 4,50 · x · b) 35 + 4,50 · 8 = 35 + 36 = 71 € · c) (100 − 35) : 4,50 = 14,4… → nach 14 Wochen hat sie erst 98 €, nach <b>15 Wochen</b> 102,50 €.'}
 ]);
 
 /* ============ THEMA 3 ============ */
@@ -545,7 +505,7 @@ renderTasks('t3',[
  parts:[{q:'Proportionalitätsfaktor q',a:2.5},{q:'y für x = 4',a:10},{q:'y für x = 6',a:15},{q:'y für x = 9',a:22.5},{q:'y für x = 15',a:37.5}],
  hint:'q = y : x = 5 : 2. Dann rechnest du y = q · x.',
  sol:'q = 5 : 2 = 2,5 → y = 2,5 · x: 10 · 15 · 22,5 · 37,5'},
-{lv:2,title:'Dreisatz: Hefte',ref:'S. 60 Beispiel 2',
+{lv:2,title:'Dreisatz: Hefte',ref:'Lernstoff S. 58–59',
  text:'6 Hefte kosten 8,10 €.',
  parts:[{q:'a) Was kostet 1 Heft?',a:1.35,unit:'€'},{q:'b) Was kosten 11 Hefte?',a:14.85,unit:'€'},{q:'c) Wie viele Hefte bekommt man für 20,25 €?',a:15,unit:'Hefte'}],
  hint:'Erst auf 1 Heft schließen (: 6), dann mit 11 multiplizieren.',
@@ -555,7 +515,7 @@ renderTasks('t3',[
  parts:[{q:'a) Proportionalitätsfaktor q',a:0.7},{q:'b) Was bedeutet q?',opts:['Pro Gramm Kirschen braucht man 0,7 g Zucker','Pro Gramm Zucker braucht man 0,7 g Kirschen','Man braucht 0,7 kg Kirschen'],a:0},{q:'c) Zucker für 750 g Kirschen',a:525,unit:'g'},{q:'d) Wie viel Kirschen passen zu 1 kg Zucker? (auf ganze g runden)',a:1429,tol:1,unit:'g'}],
  hint:'q = Zucker : Kirschen. Für d) rechnest du rückwärts: x = y : q.',
  sol:'a) q = 210 : 300 = 0,7 · b) 1 g Kirschen ↦ 0,7 g Zucker · c) 0,7 · 750 = 525 g · d) 1000 : 0,7 ≈ 1428,6 ≈ 1429 g Kirschen.'},
-{lv:2,title:'Graphen erkennen',ref:'S. 59',
+{lv:2,title:'Graphen erkennen',ref:'Lernstoff S. 59',
  text:`Welcher Graph gehört zu einer proportionalen Zuordnung?<div class="figrow">${graph({w:190,h:170,xmin:0,xmax:4,ymin:0,ymax:8,xstep:1,ystep:2,title:'A',series:[{pts:[[0,0],[4,6]]}]})}${graph({w:190,h:170,xmin:0,xmax:4,ymin:0,ymax:8,xstep:1,ystep:2,title:'B',series:[{pts:[[0,2],[4,8]]}]})}${graph({w:190,h:170,xmin:0,xmax:4,ymin:0,ymax:8,xstep:1,ystep:2,title:'C',series:[{f:x=>x*x/2}]})}</div>`,
  parts:[{q:'a) Proportional ist Graph …',opts:['A','B','C','A und C'],a:0},{q:'b) Lies bei Graph A den y-Wert für x = 2 ab.',a:3},{q:'c) Proportionalitätsfaktor von Graph A',a:1.5},{q:'d) Warum ist B nicht proportional?',opts:['Er ist keine Gerade','Er geht nicht durch den Ursprung','Er steigt zu stark'],a:1}],
  hint:'Zwei Bedingungen: Gerade UND durch (0 | 0).',
@@ -565,11 +525,6 @@ renderTasks('t3',[
  parts:[{q:'a) Proportionalitätsfaktor q',a:3.6},{q:'b) Winkel für 25 %',a:90,unit:'°'},{q:'c) Winkel für 15 %',a:54,unit:'°'},{q:'d) Winkel für 7 %',a:25.2,unit:'°'},{q:'e) Welcher Anteil gehört zu 210°? (eine Nachkommastelle)',a:58.3,tol:0.06,unit:'%'}],
  hint:'q = 360 : 100. Für e) teilst du durch q.',
  sol:'a) q = 3,6 (1 % ↦ 3,6°) · b) 3,6 · 25 = 90° · c) 54° · d) 25,2° · e) 210 : 3,6 ≈ 58,3 %.'},
-{lv:3,title:'Reicht die Farbe? – Fehler finden',ref:'S. 62 Nr. 12',
- text:'Für 14 m² Wand braucht man 2,3 Liter Farbe. Eine Wand ist 196 m² groß, es stehen 35 Liter Farbe bereit.<br>Tammo rechnet: 2,3 : 14 = 0,164285… ≈ 0,2 und dann 0,2 · 196 = 39,2 Liter → „Nein, es fehlen 4,2 Liter.“',
- parts:[{q:'a) Wie viel Liter braucht man wirklich?',a:32.2,unit:'l'},{q:'b) Reicht die Farbe?',opts:['ja','nein'],a:0},{q:'c) Was ist Tammos Fehler?',opts:['Er hat zu früh (zu stark) gerundet','Er hat falsch multipliziert','Die Zuordnung ist nicht proportional'],a:0}],
- hint:'196 : 14 = 14. Rechne mit dem Dreisatz ohne zu runden.',
- sol:'a) 196 : 14 = 14, also 14 · 2,3 = 32,2 l · b) Ja, 35 l reichen (2,8 l bleiben übrig) · c) Tammo hat 0,164… auf 0,2 gerundet. Dieser Rundungsfehler wird mit 196 multipliziert. Faustregel: Zwischenergebnisse nicht runden!'},
 {lv:3,title:'Gilt immer – gilt nie – kommt darauf an',ref:'S. 62 Nr. 15',
  text:'Entscheide für jede Aussage.',
  parts:[{q:'a) Bei einer proportionalen Zuordnung gehört zur Summe zweier x-Werte die Summe der y-Werte.',opts:['gilt immer','gilt nie','kommt darauf an'],a:0},{q:'b) Wenn y immer um 10 zunimmt, wenn x um 5 zunimmt, ist die Zuordnung proportional.',opts:['gilt immer','gilt nie','kommt darauf an'],a:2},{q:'c) Eine proportionale Zuordnung ordnet x = 0 den Wert y = 0 zu.',opts:['gilt immer','gilt nie','kommt darauf an'],a:0},{q:'d) Die Zuordnung Brenndauer → Länge einer Kerze ist proportional.',opts:['gilt immer','gilt nie','kommt darauf an'],a:1}],
@@ -589,7 +544,7 @@ renderTasks('t4',[
  parts:[{q:'Antiproportionalitätskonstante p',a:36},{q:'y für x = 1',a:36},{q:'y für x = 2',a:18},{q:'y für x = 4',a:9},{q:'y für x = 9',a:4},{q:'y für x = 12',a:3}],
  hint:'p = x · y = 3 · 12. Dann y = p : x.',
  sol:'p = 3 · 12 = 36 → y = 36 : x: 36 · 18 · 9 · 4 · 3'},
-{lv:2,title:'Pumpen',ref:'S. 65 Beispiel 2',
+{lv:2,title:'Pumpen',ref:'Lernstoff S. 64–65',
  text:'3 gleiche Pumpen brauchen 8 Stunden, um ein Becken leer zu pumpen.',
  parts:[{q:'a) Wie lange braucht 1 Pumpe?',a:24,unit:'h'},{q:'b) Wie lange brauchen 4 Pumpen?',a:6,unit:'h'},{q:'c) Wie lange brauchen 5 Pumpen? (in h)',a:4.8,unit:'h'},{q:'d) Wie viele Pumpen braucht man, um in 3 Stunden fertig zu sein?',a:8,unit:'Pumpen'}],
  hint:'Weniger Pumpen → mehr Zeit. Links : 3 → rechts · 3.',
@@ -604,30 +559,16 @@ renderTasks('t4',[
  parts:[{q:'a) kcal pro Portion bei 6 Portionen',a:50,unit:'kcal'},{q:'b) kcal pro Portion bei 4 Portionen',a:75,unit:'kcal'},{q:'c) Formel für <span class="fx">Anzahl Portionen x → kcal pro Portion y</span>',opts:['y = 300 · x','y = 300 : x','y = x : 300','y = 300 − x'],a:1},{q:'d) Wie viele Portionen braucht man, damit jede höchstens 40 kcal hat? (ganze Zahl)',a:8}],
  hint:'d) 300 : 40 = 7,5 – aber Portionen sind ganze Zahlen, und 7 Portionen wären zu groß.',
  sol:'a) 300 : 6 = 50 kcal · b) 300 : 4 = 75 kcal · c) y = 300 : x · d) Bei 7 Portionen ≈ 42,9 kcal (zu viel), bei 8 Portionen 37,5 kcal → mindestens 8 Portionen.'},
-{lv:3,title:'Rechteckige Weide',ref:'S. 66 Nr. 8',
- text:'Eine rechteckige Weide soll 1200 m² groß sein. Die Zuordnung <span class="fx">Länge l (in m) → Breite b (in m)</span> ist antiproportional.',
- parts:[{q:'a) Breite bei einer Länge von 40 m',a:30,unit:'m'},{q:'b) Breite bei einer Länge von 60 m',a:20,unit:'m'},{q:'c) Formel',opts:['b = 1200 · l','b = 1200 : l','b = l : 1200','b = 1200 − l'],a:1},{q:'d) Welche Länge hat die Weide bei einer Breite von 24 m?',a:50,unit:'m'},{q:'e) Wie lang wäre eine quadratische Weide? (auf 1 Dezimale)',a:34.6,tol:0.06,unit:'m'}],
- hint:'Flächeninhalt = Länge · Breite – das Produkt ist immer 1200. Bei e) gilt l = b, also l · l = 1200.',
- sol:`a) 1200 : 40 = 30 m · b) 20 m · c) b = 1200 : l · d) 1200 : 24 = 50 m · e) l · l = 1200 → l ≈ 34,6 m (34² = 1156, 35² = 1225; Taschenrechner: √1200 ≈ 34,64).<br>${graph({xmin:0,xmax:80,ymin:0,ymax:80,xstep:10,ystep:10,xl:'Länge (m)',yl:'Breite (m)',series:[{f:x=>1200/x,from:15,to:80,dots:[[20,60],[30,40],[40,30],[50,24],[60,20]]}]})}`},
 {lv:3,title:'Kreuzfahrt mit Zwischenstopp',ref:'S. 67 Nr. 12',
  text:'Ein Schiff startet mit 240 Personen. Der Lebensmittelvorrat reicht für 25 Tage. Nach 5 Tagen kommen 60 Personen dazu.',
  parts:[{q:'a) Für wie viele Tage würde der Rest für die ursprünglichen 240 Personen noch reichen?',a:20,unit:'Tage'},{q:'b) Für wie viele Tage reicht der Rest nun für alle Personen?',a:16,unit:'Tage'},{q:'c) Wie lange reicht der Vorrat insgesamt (ab Start)?',a:21,unit:'Tage'}],
  hint:'Nach 5 Tagen ist ein Teil verbraucht. Rechne nur mit dem Rest weiter: 240 Personen – 20 Tage. Jetzt sind es 300 Personen.',
- sol:'a) 25 − 5 = 20 Tage · b) 240 · 20 = 4800 Personentage; 4800 : 300 = 16 Tage · c) 5 + 16 = 21 Tage.'},
-{lv:3,title:'Proportional, antiproportional oder keins von beiden?',ref:'S. 67 Nr. 14–15',
- text:`Untersuche die Wertetabellen.<div class="grid2">
- <table class="wt"><tr><th>(1) x</th><td>2</td><td>4</td><td>8</td></tr><tr><th>y</th><td>12</td><td>6</td><td>3</td></tr></table>
- <table class="wt"><tr><th>(2) x</th><td>2</td><td>4</td><td>8</td></tr><tr><th>y</th><td>3</td><td>6</td><td>12</td></tr></table>
- <table class="wt"><tr><th>(3) x</th><td>1</td><td>2</td><td>3</td></tr><tr><th>y</th><td>10</td><td>8</td><td>6</td></tr></table>
- <table class="wt"><tr><th>(4) x</th><td>0,5</td><td>2</td><td>5</td></tr><tr><th>y</th><td>40</td><td>10</td><td>4</td></tr></table></div>`,
- parts:[{q:'Tabelle (1)',opts:['proportional','antiproportional','keins von beiden'],a:1},{q:'Tabelle (2)',opts:['proportional','antiproportional','keins von beiden'],a:0},{q:'Tabelle (3)',opts:['proportional','antiproportional','keins von beiden'],a:2},{q:'Tabelle (4)',opts:['proportional','antiproportional','keins von beiden'],a:1},{q:'Carla sagt: „Die Graphen verschiedener antiproportionaler Zuordnungen schneiden sich in mindestens einem Punkt.“',opts:WF,a:1}],
- hint:'Berechne für jede Tabelle y : x und x · y. Bei Carla: Zeichne y = 12 : x und y = 20 : x.',
- sol:'(1) x·y = 24 immer → antiproportional · (2) y : x = 1,5 immer → proportional · (3) y : x = 10; 4; 2 und x·y = 10; 16; 18 → keins (y nimmt immer um 2 ab) · (4) x·y = 20 immer → antiproportional.<br>Carla: falsch – z.&nbsp;B. y = 12 : x und y = 20 : x verlaufen „nebeneinander“ und schneiden sich nie (für gleiches x ist 20 : x immer größer als 12 : x).'}
+ sol:'a) 25 − 5 = 20 Tage · b) 240 · 20 = 4800 Personentage; 4800 : 300 = 16 Tage · c) 5 + 16 = 21 Tage.'}
 ]);
 
 /* ============ Illustrationen im Hintergrundteil ============ */
 $('#g_temp').innerHTML = graph({xmin:0,xmax:18,ymin:0,ymax:18,xstep:3,ystep:3,xl:'Uhrzeit',yl:'Temperatur (°C)',series:[{pts:[[6,3],[9,8],[12,14],[15,16],[18,10]],dots:[[6,3],[9,8],[12,14],[15,16],[18,10]]}]});
-$('#fuellDemo').innerHTML = vessel('zyl','Zylinder')+graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,xl:'Zeit',yl:'Höhe',series:[{pts:[[0,0],[4,4]]}]})+vessel('bauch','bauchig')+graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,xl:'Zeit',yl:'Höhe',series:[{f:x=>2+2*Math.cbrt((x-2)/2)}]});
+void vessel('zyl','Zylinder')+graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,xl:'Zeit',yl:'Höhe',series:[{pts:[[0,0],[4,4]]}]})+vessel('bauch','bauchig')+graph({w:170,h:150,xmin:0,xmax:4,ymin:0,ymax:4,xstep:4,ystep:4,gx:1,gy:1,xl:'Zeit',yl:'Höhe',series:[{f:x=>2+2*Math.cbrt((x-2)/2)}]});
 $('#g_formel').innerHTML = graph({xmin:0,xmax:6,ymin:0,ymax:16,xstep:1,ystep:2,xl:'x',yl:'y',title:'y = 2 · x + 3',series:[{pts:[[0,3],[6,15]],dots:[[0,3],[1,5],[2,7],[4,11],[5.5,14]]}]});
 $('#g_prop').innerHTML = graph({xmin:0,xmax:12,ymin:0,ymax:0.16,xstep:2,ystep:0.02,gx:1,xl:'Drahtlänge (m)',yl:'Gewicht (kg)',title:'y = 0,012 · x',series:[{pts:[[0,0],[12,0.144]],dots:[[2,0.024],[4,0.048],[6,0.072],[8,0.096],[10,0.12],[12,0.144]]}]});
 $('#g_anti').innerHTML = graph({xmin:0,xmax:20,ymin:0,ymax:180,xstep:2,ystep:20,xl:'Stückzahl',yl:'Länge (mm)',title:'y = 180 : x',series:[{f:x=>180/x,from:1,to:20,dots:[[1,180],[2,90],[4,45],[6,30],[10,18],[18,10]]}]});
@@ -662,7 +603,7 @@ function buildCheck(){
     tile.innerHTML=`<div class="n">Thema ${c.k.slice(1)}</div><div class="h">${c.name}</div><div class="bar" data-prog="${c.k}"><div></div></div><div class="small" data-progt="${c.k}"></div>`;
     tile.onclick=()=>show(c.k); $('#tiles').appendChild(tile);
   });
-  [['mix','Trainer','Zufallsaufgaben zu allen Themen'],['exam','Beispielklausur','45 Minuten, 40 Punkte, mit Musterlösung']].forEach(([k,h,d])=>{
+  [['mix','Trainer','Zufallsaufgaben zu allen Themen'],['exam','Beispielklausur','45 Minuten, 36 Punkte, mit Musterlösung']].forEach(([k,h,d])=>{
     const t=document.createElement('div'); t.className='tile'; t.innerHTML=`<div class="n">Üben</div><div class="h">${h}</div><div class="small">${d}</div>`; t.onclick=()=>show(k); $('#tiles').appendChild(t);
   });
   updateProgress();
@@ -745,11 +686,7 @@ const EXAM=[
  text:`<div class="grid2"><div><b>(1) proportional</b><table class="wt"><tr><th>x</th><td>2</td><td>5</td><td>7</td></tr><tr><th>y</th><td>8</td><td>?</td><td>?</td></tr></table></div><div><b>(2) antiproportional</b><table class="wt"><tr><th>x</th><td>2</td><td>5</td><td>8</td></tr><tr><th>y</th><td>20</td><td>?</td><td>?</td></tr></table></div></div>`,
  parts:[{q:'(1) y für x = 5 (1 P)',a:20,p:1},{q:'(1) y für x = 7 (1 P)',a:28,p:1},{q:'(2) y für x = 5 (1 P)',a:8,p:1},{q:'(2) y für x = 8 (1 P)',a:5,p:1},{q:'(2) y für x = 0,5 (1 P)',a:80,p:1}],
  sol:'(1) q = 8 : 2 = 4 → 20; 28 · (2) p = 2 · 20 = 40 → 40 : 5 = 8; 40 : 8 = 5; 40 : 0,5 = 80'},
-{n:7,pts:4,title:'Füllgraph',
- text:`Ein Gefäß wird gleichmäßig mit Wasser gefüllt.<div class="figrow">${vessel('unten','Gefäß')}</div>`,
- parts:[{q:'a) Welcher Graph passt? (2 P)',opts:['eine Gerade','erst flach, dann immer steiler','erst steil, dann immer flacher','erst steigend, dann waagerecht'],a:1,p:2},{q:'b) Ist die Zuordnung Zeit → Füllhöhe proportional? (2 P)',opts:JN,a:1,p:2}],
- sol:'a) Das Gefäß wird nach oben schmaler, das Wasser steigt also immer schneller → erst flach, dann immer steiler. · b) Nein, der Graph ist keine Gerade (doppelte Zeit ergibt nicht die doppelte Höhe).'},
-{n:8,pts:4,title:'Klassenfahrt (Problemlösen)',
+{n:7,pts:4,title:'Klassenfahrt (Problemlösen)',
  text:'Der Bus für die Klassenfahrt kostet insgesamt 1200 €. Die Kosten werden gleichmäßig auf alle Schülerinnen und Schüler verteilt. Ursprünglich fahren 24 mit, dann sagen 6 ab.',
  parts:[{q:'a) Buskosten pro Person ursprünglich (1 P)',a:50,unit:'€',p:1},{q:'b) Buskosten pro Person nach den Absagen (auf Cent runden) (2 P)',a:66.67,tol:0.011,unit:'€',p:2},{q:'c) Wie viele Personen müssten mitfahren, damit jede genau 40 € zahlt? (1 P)',a:30,p:1}],
  sol:'a) 1200 : 24 = 50 € · b) 1200 : 18 ≈ 66,67 € · c) 1200 : 40 = 30 Personen'}
@@ -780,8 +717,8 @@ $('#examSubmit').onclick=()=>{
     });
     d.querySelector('.sol').classList.add('show');
   });
-  const note= got>=36?1: got>=30?2: got>=24?3: got>=18?4: got>=9?5:6;
-  $('#examResult').innerHTML=`Du hast <b>${got} von ${max} Punkten</b> erreicht → Note <b>${note}</b>. ${got>=30?'Stark! Du bist gut vorbereitet.':got>=18?'Schau dir die rot markierten Aufgaben noch einmal im passenden Thema an.':'Wiederhole die Themen mit den Basis-Aufgaben und versuche es noch einmal.'}<br><span class="small">Hinweis: In der echten Arbeit zählen auch Rechenweg, Begründungen und Graphen – vergleiche dein Heft mit den Musterlösungen.</span>`;
+  const note= got>=33?1: got>=27?2: got>=22?3: got>=16?4: got>=8?5:6;
+  $('#examResult').innerHTML=`Du hast <b>${got} von ${max} Punkten</b> erreicht → Note <b>${note}</b>. ${got>=27?'Stark! Du bist gut vorbereitet.':got>=16?'Schau dir die rot markierten Aufgaben noch einmal im passenden Thema an.':'Wiederhole die Themen mit den Basis-Aufgaben und versuche es noch einmal.'}<br><span class="small">Hinweis: In der echten Arbeit zählen auch Rechenweg, Begründungen und Graphen – vergleiche dein Heft mit den Musterlösungen.</span>`;
   clearInterval(timerId); running=false; $('#tStart').textContent='Start';
   window.scrollTo({top:document.getElementById('examResult').offsetTop-80,behavior:'smooth'});
 };
